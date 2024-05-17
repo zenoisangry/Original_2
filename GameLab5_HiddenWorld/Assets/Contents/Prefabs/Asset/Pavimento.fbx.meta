@@ -3,7 +3,12 @@ guid: 56df418cc95b1fc42ad654d200734217
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Pavimento
+    second: {fileID: 2100000, guid: 8b0a588bb3e9ae247b44831fc5a88e92, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
