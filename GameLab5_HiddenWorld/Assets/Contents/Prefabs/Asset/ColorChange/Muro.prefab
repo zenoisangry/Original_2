@@ -63,8 +63,62 @@ PrefabInstance:
       propertyPath: m_Name
       value: Muro
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e456e6b90d99574faf151ae9899bddc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e456e6b90d99574faf151ae9899bddc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4913170304098533122}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e456e6b90d99574faf151ae9899bddc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2568343085916995802}
   m_SourcePrefab: {fileID: 100100000, guid: 6e456e6b90d99574faf151ae9899bddc, type: 3}
+--- !u!1 &6305836310663105443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e456e6b90d99574faf151ae9899bddc,
+    type: 3}
+  m_PrefabInstance: {fileID: 6576308131387193074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4913170304098533122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6305836310663105443}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3, y: 1.0000002, z: 1.0000002}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &2568343085916995802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6305836310663105443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2273de76f1a176e44a4ef99e11dfa831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterial: {fileID: 2100000, guid: cfe71cdea128dea43a80805d16d98508, type: 2}
+  originalMaterial: {fileID: 2100000, guid: 281fe87594c2d1343923f0956131bdc2, type: 2}
