@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e456e6b90d99574faf151ae9899bddc
+guid: 3734e51ead7c76a44bfbca7e6b8c3a7e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Color_Muro
-    second: {fileID: 2100000, guid: 281fe87594c2d1343923f0956131bdc2, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 89598cbd5e6f0704dbdad4a8f06e463f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
