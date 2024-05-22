@@ -84,6 +84,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuroN (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6305836310663105443, guid: 09dc55bdbbb639b4c8fee25a284a0973,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6685879633241821465, guid: 09dc55bdbbb639b4c8fee25a284a0973,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -157,6 +162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MuroN (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305836310663105443, guid: 09dc55bdbbb639b4c8fee25a284a0973,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6685879633241821465, guid: 09dc55bdbbb639b4c8fee25a284a0973,
         type: 3}
@@ -232,6 +242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuroN
       objectReference: {fileID: 0}
+    - target: {fileID: 6305836310663105443, guid: 09dc55bdbbb639b4c8fee25a284a0973,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6685879633241821465, guid: 09dc55bdbbb639b4c8fee25a284a0973,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -305,6 +320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MuroN (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305836310663105443, guid: 09dc55bdbbb639b4c8fee25a284a0973,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6685879633241821465, guid: 09dc55bdbbb639b4c8fee25a284a0973,
         type: 3}
@@ -380,6 +400,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuroN (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6305836310663105443, guid: 09dc55bdbbb639b4c8fee25a284a0973,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6685879633241821465, guid: 09dc55bdbbb639b4c8fee25a284a0973,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -453,6 +478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MuroN (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305836310663105443, guid: 09dc55bdbbb639b4c8fee25a284a0973,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6685879633241821465, guid: 09dc55bdbbb639b4c8fee25a284a0973,
         type: 3}
@@ -528,6 +558,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuroN (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6305836310663105443, guid: 09dc55bdbbb639b4c8fee25a284a0973,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6685879633241821465, guid: 09dc55bdbbb639b4c8fee25a284a0973,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -601,6 +636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MuroN
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305836310663105443, guid: 09dc55bdbbb639b4c8fee25a284a0973,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6685879633241821465, guid: 09dc55bdbbb639b4c8fee25a284a0973,
         type: 3}
