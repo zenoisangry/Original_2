@@ -8,10 +8,13 @@ public class ChangeMaterial : MonoBehaviour
 
     void Start()
     {
-        // Save the original material
-        if (TryGetComponent(out objectRenderer))
+        // Get the Renderer component attached to the object
+        objectRenderer = GetComponent<Renderer>();
+
+        // Set the initial material to the originalMaterial
+        if (objectRenderer != null && originalMaterial != null)
         {
-            originalMaterial = objectRenderer.material;
+            objectRenderer.material = originalMaterial;
         }
     }
     public void WallChange()
@@ -19,7 +22,7 @@ public class ChangeMaterial : MonoBehaviour
             // Toggle between the original and new material
             if (objectRenderer != null && newMaterial != null)
             {
-                if (objectRenderer.material == originalMaterial)
+                if (objectRenderer.material.name == originalMaterial.name + " (Instance)")
                 {
                     objectRenderer.material = newMaterial;
                 }

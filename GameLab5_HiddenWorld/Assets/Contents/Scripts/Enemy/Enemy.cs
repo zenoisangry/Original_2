@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Enemy : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class Enemy : MonoBehaviour
     public float Radius;
     [Range(0,360)] public float Angle;
     public GameObject PlayerRef;
+
+    [Header("Player death")]
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform destination;
+    [SerializeField] private GameObject playerg;
 
     [SerializeField] private LayerMask targetMask;
     [SerializeField] private LayerMask obstructionMask;
@@ -83,8 +89,11 @@ public class Enemy : MonoBehaviour
         {
             fovMeshRenderer.material.color = playerDetectedColor;
             canMove = false; // Stop movement when player is detected
+            playerg.SetActive(false);
+            player.position = destination.position;
+            playerg.SetActive(true);
         }
-        else
+        else 
         {
             fovMeshRenderer.material.color = fovColor;
             canMove = true; // Resume movement when player is not detected

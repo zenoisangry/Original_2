@@ -156,11 +156,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PavimentoN (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -234,11 +229,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PavimentoN (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
@@ -314,11 +304,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PavimentoN (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -392,11 +377,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PavimentoN (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
@@ -472,11 +452,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PavimentoN (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -550,11 +525,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PavimentoN
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
@@ -630,11 +600,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PavimentoN (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -708,11 +673,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PavimentoN (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
@@ -788,11 +748,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PavimentoN (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -866,11 +821,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PavimentoN (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
@@ -946,11 +896,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PavimentoN
       objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1024,11 +969,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PavimentoN (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
@@ -1104,11 +1044,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PavimentoN (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1182,11 +1117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PavimentoN (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
@@ -1262,11 +1192,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PavimentoN
       objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1340,11 +1265,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PavimentoN
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350403159731097112, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7875159770819073186, guid: 65fadfcaf0333af46a7ddcc5fc9c0928,
         type: 3}
