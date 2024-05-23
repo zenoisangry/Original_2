@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8623895832215467501}
   m_Layer: 0
-  m_Name: Muro2x4 (2)
+  m_Name: NWMuro2x5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

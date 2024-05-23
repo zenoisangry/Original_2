@@ -45,7 +45,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037780897562606825}
   m_Layer: 0
-  m_Name: MuroN2x4Alt
+  m_Name: NWMuro2x4Alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

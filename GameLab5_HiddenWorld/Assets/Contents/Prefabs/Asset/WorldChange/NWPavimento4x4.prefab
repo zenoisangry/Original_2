@@ -45,7 +45,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7011346079492116046}
   m_Layer: 0
-  m_Name: PavimentoN4x4
+  m_Name: NWPavimento4x4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
