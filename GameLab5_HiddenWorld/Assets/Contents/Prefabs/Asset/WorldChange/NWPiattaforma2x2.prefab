@@ -238,6 +238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PiattaformaN
       objectReference: {fileID: 0}
+    - target: {fileID: 1655155366559452492, guid: b80bb0d64ba68374c98522dc375ce00b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2140225384349423606, guid: b80bb0d64ba68374c98522dc375ce00b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -311,6 +316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PiattaformaN (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655155366559452492, guid: b80bb0d64ba68374c98522dc375ce00b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2140225384349423606, guid: b80bb0d64ba68374c98522dc375ce00b,
         type: 3}
@@ -386,6 +396,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PiattaformaN (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1655155366559452492, guid: b80bb0d64ba68374c98522dc375ce00b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2140225384349423606, guid: b80bb0d64ba68374c98522dc375ce00b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -459,6 +474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PiattaformaN (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655155366559452492, guid: b80bb0d64ba68374c98522dc375ce00b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2140225384349423606, guid: b80bb0d64ba68374c98522dc375ce00b,
         type: 3}
