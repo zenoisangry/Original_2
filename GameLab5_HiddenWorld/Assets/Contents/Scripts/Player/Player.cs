@@ -96,4 +96,23 @@ public class Player : MonoBehaviour
         canDash = true;
     }
 
+    public void Respawn(Vector3 respawnPosition)
+    {
+        transform.position = respawnPosition;
+        playerVelocity = Vector3.zero;
+        isDashing = false;
+        canDash = true;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Platform"))
+        {
+            transform.SetParent(hit.transform);
+        }
+        else
+        {
+            transform.SetParent(null);
+        }
+    }
 }

@@ -4,30 +4,22 @@ public class ToggleVisibility : MonoBehaviour
     [SerializeField] private bool world2;
     private void Start()
     {
-        if (world2) 
-        { 
-            gameObject.SetActive(false);
-        }
+        SetInitialVisibility();
+        InputManager.OnCooldownTriggered += Change; // Subscribe to the event
     }
+
     private void OnDestroy()
     {
-        if (world2)
-        {
-            gameObject.SetActive(true);
-        }
-            
+        InputManager.OnCooldownTriggered -= Change; // Unsubscribe from the event
     }
+
+    private void SetInitialVisibility()
+    {
+        gameObject.SetActive(!world2);
+    }
+
     public void Change()
     {
-        // If the target object is inactive, activate it
-        if (!gameObject.activeSelf)
-        {
-            gameObject.SetActive(true);
-        }
-        // If the target object is active, deactivate it
-        else
-        {
-            gameObject.SetActive(false);
-        }
+        gameObject.SetActive(!gameObject.activeSelf);
     }
 }

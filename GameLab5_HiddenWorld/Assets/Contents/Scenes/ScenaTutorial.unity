@@ -3213,11 +3213,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PiattaformaNAlt2x2 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7074920681318958783, guid: 28631fb8615fe03469504c6f446bfd13,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4341,9 +4336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da97e9e52f22ed4197062f913cab27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 564556453}
-  destination: {fileID: 851556828}
-  playerg: {fileID: 670556836}
+  Playertransform: {fileID: 564556453}
+  Destination: {fileID: 851556828}
+  player: {fileID: 670556836}
 --- !u!64 &1906503355
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5147,11 +5142,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PiattaformaNAlt2x2
       objectReference: {fileID: 0}
-    - target: {fileID: 7074920681318958783, guid: 28631fb8615fe03469504c6f446bfd13,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5317,30 +5307,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8293970579566046703, guid: 7823553efdc7db64282b0af31c60880b,
-        type: 3}
-      propertyPath: dashSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -44292217682485827, guid: 7823553efdc7db64282b0af31c60880b,
-        type: 3}
-      propertyPath: m_Height
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -44292217682485827, guid: 7823553efdc7db64282b0af31c60880b,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 6044456272627898656, guid: 7823553efdc7db64282b0af31c60880b,
         type: 3}
       propertyPath: m_Name
       value: Protagonista
-      objectReference: {fileID: 0}
-    - target: {fileID: 6044456272627898656, guid: 7823553efdc7db64282b0af31c60880b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6388893014897345434, guid: 7823553efdc7db64282b0af31c60880b,
         type: 3}

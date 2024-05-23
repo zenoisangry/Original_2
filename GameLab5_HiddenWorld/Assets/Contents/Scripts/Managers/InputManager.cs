@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,5 +22,11 @@ public class InputManager : MonoBehaviour
             Vector2 input = Playercontrols.Player.Movement.ReadValue<Vector2>();  // (X, Y) => (X, Z)
             return new Vector3(input.x, 0, input.y).normalized;
         }
+    }
+
+    public static event Action OnCooldownTriggered;
+    public static void TriggerCooldown()
+    {
+        OnCooldownTriggered?.Invoke();
     }
 }

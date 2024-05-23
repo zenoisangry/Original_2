@@ -16,20 +16,19 @@ public class ChangeMaterial : MonoBehaviour
         {
             objectRenderer.material = originalMaterial;
         }
+
+        InputManager.OnCooldownTriggered += WallChange; // Subscribe to the event
     }
+    private void OnDestroy()
+    {
+        InputManager.OnCooldownTriggered -= WallChange; // Unsubscribe from the event
+    }
+
     public void WallChange()
     {
-            // Toggle between the original and new material
-            if (objectRenderer != null && newMaterial != null)
-            {
-                if (objectRenderer.material.name == originalMaterial.name + " (Instance)")
-                {
-                    objectRenderer.material = newMaterial;
-                }
-                else
-                {
-                    objectRenderer.material = originalMaterial;
-                }
-            }
+        if (objectRenderer != null && newMaterial != null && originalMaterial != null)
+        {
+            objectRenderer.material = objectRenderer.material == originalMaterial ? newMaterial : originalMaterial;
+        }
     }
 }

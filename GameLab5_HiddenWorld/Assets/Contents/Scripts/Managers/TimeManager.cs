@@ -11,29 +11,13 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         // Check if the 'C' key is pressed and enough time has passed since the last use
-        if (Input.GetKeyDown(KeyCode.C) && Time.time > lastUsedTime + cooldownTime)
+        if (InputManager.Playercontrols.Player.ChangeWorld.triggered && Time.time > lastUsedTime + cooldownTime)
         {
             // Update the last used time to the current time
             lastUsedTime = Time.time;
 
-            // Notify all listeners that the cooldown has been triggered
-            NotifyListeners();
-        }
-    }
-
-    // Method to notify all listeners that the cooldown has been triggered
-    void NotifyListeners()
-    {
-        ToggleVisibility[] visibilityTogglers = Resources.FindObjectsOfTypeAll<ToggleVisibility>();
-        foreach (ToggleVisibility toggler in visibilityTogglers)
-        {
-            toggler.Change();
-        }
-
-        ChangeMaterial[] materialChangers = FindObjectsOfType<ChangeMaterial>();
-        foreach (ChangeMaterial changer in materialChangers)
-        {
-            changer.WallChange();
+            // Trigger the cooldown event
+            InputManager.TriggerCooldown();
         }
     }
 
