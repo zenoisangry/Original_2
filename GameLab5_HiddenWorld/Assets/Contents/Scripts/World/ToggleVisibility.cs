@@ -1,25 +1,10 @@
 using UnityEngine;
 public class ToggleVisibility : MonoBehaviour
 {
-    [SerializeField] private bool world2;
-    private void Start()
-    {
-        SetInitialVisibility();
-        InputManager.OnCooldownTriggered += Change; // Subscribe to the event
-    }
+    public bool isInWorld2;
 
-    private void OnDestroy()
+    public void SwitchVisibility(bool toWorld1)
     {
-        InputManager.OnCooldownTriggered -= Change; // Unsubscribe from the event
-    }
-
-    private void SetInitialVisibility()
-    {
-        gameObject.SetActive(!world2);
-    }
-
-    public void Change()
-    {
-        gameObject.SetActive(!gameObject.activeSelf);
+        gameObject.SetActive(isInWorld2 ? !toWorld1 : toWorld1);
     }
 }

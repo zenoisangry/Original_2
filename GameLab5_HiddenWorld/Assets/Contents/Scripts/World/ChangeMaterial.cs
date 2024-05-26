@@ -2,33 +2,30 @@ using UnityEngine;
 
 public class ChangeMaterial : MonoBehaviour
 {
-    public Material newMaterial;
-    public Material originalMaterial;
-    private Renderer objectRenderer;
+    public Material world1Material;
+    public Material world2Material;
 
-    void Start()
+    private Renderer objRenderer;
+
+    void Awake()
     {
-        // Get the Renderer component attached to the object
-        objectRenderer = GetComponent<Renderer>();
-
-        // Set the initial material to the originalMaterial
-        if (objectRenderer != null && originalMaterial != null)
-        {
-            objectRenderer.material = originalMaterial;
-        }
-
-        InputManager.OnCooldownTriggered += WallChange; // Subscribe to the event
-    }
-    private void OnDestroy()
-    {
-        InputManager.OnCooldownTriggered -= WallChange; // Unsubscribe from the event
+        objRenderer = GetComponent<Renderer>();
+        SetMaterialToWorld1();
     }
 
-    public void WallChange()
+    public void SwitchMaterial(bool toWorld1)
     {
-        if (objectRenderer != null && newMaterial != null && originalMaterial != null)
-        {
-            objectRenderer.material = objectRenderer.material == originalMaterial ? newMaterial : originalMaterial;
-        }
+        objRenderer.material = toWorld1 ? world1Material : world2Material;
     }
+
+    public void SetMaterialToWorld1()
+    {
+        objRenderer.material = world1Material;
+    }
+
+    public void SetMaterialToWorld2()
+    {
+        objRenderer.material = world2Material;
+    }
+
 }

@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a01e0dc64cd4e84aa6769038c84b081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  world2: 1
+  isInWorld2: 1
 --- !u!54 &4939210464908161023
 Rigidbody:
   m_ObjectHideFlags: 0

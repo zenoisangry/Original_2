@@ -1,20 +1,27 @@
 using UnityEngine;
 using System.Collections;
-using System;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Enemy : MonoBehaviour
 {
+    public enum EnemyState
+    {
+        Moving, Stopping, Turning
+    }
+    public EnemyState currentState = EnemyState.Moving;
+
     [Header("Movement")]
     [SerializeField] private float movementSpeed = 5.0f;
     [SerializeField] private Transform pathPointsParent;
     [SerializeField] private float distanceFromPoint = 0.1f;
+    [SerializeField] private float stopDuration = 2.0f; // Duration to stop at each point
+    [SerializeField] private float turnDuration = 1.0f; // Duration to perform a U-turn
     private int currentPathIndex = 0;
+    private bool movingForward = true; // Direction of movement along the path
     public bool canMove = true;
 
-    [Header("Rotation")]
-    [SerializeField] private float lookRotationTime = 0.2f;
-    private float lookRotationTimer = 0;
+    private Quaternion initialRotation;
+    private Quaternion targetRotation;
+    private float stateTimer = 0f;
 
     [Header("Field of view")]
     [SerializeField] private Color fovColor;  // Color for the FOV mesh
@@ -104,38 +111,79 @@ public class Enemy : MonoBehaviour
     {
         if (canMove)
         {
-            lookRotationTimer += Time.deltaTime;
-            Patrol();
+            stateTimer += Time.deltaTime;
+            switch (currentState)
+            {
+                case EnemyState.Moving:
+                    MoveToNextPoint();
+                    break;
+                case EnemyState.Stopping:
+                    if (stateTimer >= stopDuration)
+                    {
+                        if (IsAtEndOfPath())
+                        {
+                            PrepareTurn();
+                        }
+                        else
+                        {
+                            ProceedToNextPoint();
+                        }
+                    }
+                    break;
+                case EnemyState.Turning:
+                    TurnAround();
+                    break;
+            }
         }
 
         UpdateFOVVisualization();
     }
-    private void Patrol()
-    {
-        PointToLook = pathPointsParent.GetChild(currentPathIndex).position;
-        MoveToNextPoint();
-    }
-    private Vector3 PointToLook
-    {
-        set
-        {
-            transform.forward = Vector3.Lerp(transform.forward, value - transform.position, lookRotationTimer / lookRotationTime);
-        }
-    }
-
-    private int NextPathPoint => (currentPathIndex + 1) % pathPointsParent.childCount;
-
     private void MoveToNextPoint()
     {
-        Transform targetPoint = pathPointsParent.GetChild(currentPathIndex);
-        Vector3 currentDirection = (targetPoint.position - transform.position).normalized;
-        transform.position += movementSpeed * Time.deltaTime * currentDirection;
-
-        if (Vector3.Distance(transform.position, targetPoint.position) <= distanceFromPoint)
+        if (pathPointsParent.childCount > 0)
         {
-            currentPathIndex = NextPathPoint;
-            lookRotationTimer = 0;
+            Transform targetPoint = pathPointsParent.GetChild(currentPathIndex);
+            transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, movementSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, targetPoint.position) <= distanceFromPoint)
+            {
+                currentState = EnemyState.Stopping;
+                stateTimer = 0f;
+            }
         }
+    }
+
+    private void ProceedToNextPoint()
+    {
+        currentPathIndex = movingForward ? currentPathIndex + 1 : currentPathIndex - 1;
+        currentState = EnemyState.Moving;
+    }
+
+    private void PrepareTurn()
+    {
+        initialRotation = transform.rotation;
+        targetRotation = Quaternion.Euler(0, transform.eulerAngles.y + 180, 0);
+        currentState = EnemyState.Turning;
+        stateTimer = 0f;
+    }
+
+    private void TurnAround()
+    {
+        float t = stateTimer / turnDuration;
+        t = t * t * (3f - 2f * t); // Smoothstep interpolation
+        transform.rotation = Quaternion.Lerp(initialRotation, targetRotation, t);
+
+        if (stateTimer >= turnDuration)
+        {
+            movingForward = !movingForward; // Reverse direction
+            ProceedToNextPoint();
+        }
+    }
+
+    private bool IsAtEndOfPath()
+    {
+        return (movingForward && currentPathIndex >= pathPointsParent.childCount - 1) ||
+               (!movingForward && currentPathIndex <= 0);
     }
 
     private void UpdateFOVVisualization()

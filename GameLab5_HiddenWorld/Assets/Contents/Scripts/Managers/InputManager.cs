@@ -24,9 +24,5 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    public static event Action OnCooldownTriggered;
-    public static void TriggerCooldown()
-    {
-        OnCooldownTriggered?.Invoke();
-    }
+    
 }
