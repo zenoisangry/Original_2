@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,4 +23,6 @@ public class InputManager : MonoBehaviour
             return new Vector3(input.x, 0, input.y).normalized;
         }
     }
+
+    
 }

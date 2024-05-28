@@ -103,7 +103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2944138321434506321}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.17, y: 0, z: 16.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathPointsParent: {fileID: 1469647492149512837}
-  moveSpeed: 3
+  moveSpeed: 1
 --- !u!1 &8666573342555942566
 GameObject:
   m_ObjectHideFlags: 0

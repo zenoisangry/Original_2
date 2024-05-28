@@ -11,37 +11,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.408103
+      value: 1.9000001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.1741249
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.052172
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -3.7493994e-33
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -6.123234e-17
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
         type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
+        type: 3}
       propertyPath: m_LocalRotation.z
-      value: 6.123234e-17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 738363ff9f3fee146bf5af768ad797e7,
         type: 3}
@@ -116,13 +116,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 0
-  m_Radius: 0.55
+  m_Height: 1.04
+  m_Radius: 0.26
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.59, z: 0}
 --- !u!114 &-8293970579566046703
 MonoBehaviour:
   m_ObjectHideFlags: 0

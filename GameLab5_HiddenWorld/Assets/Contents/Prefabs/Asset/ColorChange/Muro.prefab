@@ -120,5 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2273de76f1a176e44a4ef99e11dfa831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newMaterial: {fileID: 2100000, guid: cfe71cdea128dea43a80805d16d98508, type: 2}
-  originalMaterial: {fileID: 2100000, guid: 281fe87594c2d1343923f0956131bdc2, type: 2}
+  world1Material: {fileID: 2100000, guid: 281fe87594c2d1343923f0956131bdc2, type: 2}
+  world2Material: {fileID: 2100000, guid: cfe71cdea128dea43a80805d16d98508, type: 2}
