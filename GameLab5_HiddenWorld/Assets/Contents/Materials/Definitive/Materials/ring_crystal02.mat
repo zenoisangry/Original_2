@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CheckPoint_Material
+  m_Name: ring_crystal02
   m_Shader: {fileID: -6465566751694194690, guid: af33e1519b385c74db9610cd380054e5,
     type: 3}
   m_Parent: {fileID: 0}
@@ -86,44 +86,46 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _BottomLine: 0.811
+    - _BottomLine: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
-    - _Cutoff: 0
+    - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DstBlend: 10
-    - _DstBlendAlpha: 10
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _GlossMapScale: 0
-    - _Glossiness: 0
-    - _GlossyReflections: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
     - _Metallic: 1
+    - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.005
+    - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.61
+    - _Smoothness: 0.6
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
-    - _Surface: 1
-    - _TopLine: 0.742
+    - _Surface: 0
+    - _TopLine: 0.84
+    - _UVSec: 0
     - _WorkflowMode: 1
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 1.4757918, b: 1.4980392, a: 1}
-    - _BottomColor: {r: 0.34117648, g: 0, b: 0.78039217, a: 0.39215687}
-    - _Color: {r: 0.20388022, g: 0.9162118, b: 0.93962264, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _BaseColor: {r: 0, g: 5.8981624, b: 5.992157, a: 1}
+    - _BottomColor: {r: 0.011764705, g: 0.012227922, b: 1, a: 0}
+    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TopColor: {r: 1.9094338, g: 0.12609442, b: 1.3794913, a: 0.39215687}
+    - _TopColor: {r: 1.8711357, g: 2.6923437, b: 2.9960785, a: 0.39215687}
   m_BuildTextureStacks: []
---- !u!114 &5949523661559353474
+--- !u!114 &671713613355040007
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

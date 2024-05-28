@@ -67,7 +67,6 @@ public class Player : MonoBehaviour
         // Changes the height position of the player..
         if (InputManager.Playercontrols.Player.Dash.triggered && groundedPlayer && canDash)
         {
-            //playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
             StartCoroutine(Dash());
             
         }
@@ -96,4 +95,25 @@ public class Player : MonoBehaviour
         canDash = true;
     }
 
+    public void Respawn(Vector3 respawnPosition)
+    {
+        transform.position = respawnPosition;
+        playerVelocity = Vector3.zero;
+        isDashing = false;
+        canDash = true;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Platform"))
+        {
+            transform.SetParent(hit.transform);
+            InputManager.Playercontrols.FindAction("ChangeWorld").Disable();
+        }
+        else
+        {
+            transform.SetParent(null);
+            InputManager.Playercontrols.FindAction("ChangeWorld").Enable();
+        }
+    }
 }

@@ -26,7 +26,7 @@ public class MovingPlatforms : MonoBehaviour
         targetPoint = pathPoints[currentPathIndex];
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // Move the platform towards the current target point
         MoveTowardsTarget();
