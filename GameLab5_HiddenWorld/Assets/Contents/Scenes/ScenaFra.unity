@@ -3025,6 +3025,16 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 126414877}
+    - target: {fileID: 9124627201162866798, guid: 6b5faa2a610ee5147825c5f16688a754,
+        type: 3}
+      propertyPath: stopDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124627201162866798, guid: 6b5faa2a610ee5147825c5f16688a754,
+        type: 3}
+      propertyPath: turnDuration
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4599,6 +4609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
         type: 3}
+      propertyPath: Radius
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 564556453}
@@ -4612,6 +4627,11 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 126414877}
+    - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
+        type: 3}
+      propertyPath: turnDuration
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4779,7 +4799,7 @@ PrefabInstance:
     - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
         type: 3}
       propertyPath: Radius
-      value: 4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
         type: 3}
@@ -4796,6 +4816,11 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 126414877}
+    - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
+        type: 3}
+      propertyPath: turnDuration
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9598,6 +9623,16 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 126414877}
+    - target: {fileID: 9124627201162866798, guid: 6b5faa2a610ee5147825c5f16688a754,
+        type: 3}
+      propertyPath: stopDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124627201162866798, guid: 6b5faa2a610ee5147825c5f16688a754,
+        type: 3}
+      propertyPath: turnDuration
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11382,6 +11417,16 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 126414877}
+    - target: {fileID: 9124627201162866798, guid: 6b5faa2a610ee5147825c5f16688a754,
+        type: 3}
+      propertyPath: stopDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124627201162866798, guid: 6b5faa2a610ee5147825c5f16688a754,
+        type: 3}
+      propertyPath: turnDuration
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12504,7 +12549,7 @@ PrefabInstance:
     - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
         type: 3}
       propertyPath: Radius
-      value: 4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
         type: 3}
@@ -12521,6 +12566,11 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 126414877}
+    - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
+        type: 3}
+      propertyPath: turnDuration
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13395,6 +13445,16 @@ PrefabInstance:
         type: 3}
       propertyPath: CanSeePlayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124627201162866798, guid: 6b5faa2a610ee5147825c5f16688a754,
+        type: 3}
+      propertyPath: stopDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124627201162866798, guid: 6b5faa2a610ee5147825c5f16688a754,
+        type: 3}
+      propertyPath: turnDuration
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17335,6 +17395,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
         type: 3}
+      propertyPath: Radius
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 564556453}
@@ -17348,6 +17413,11 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 126414877}
+    - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
+        type: 3}
+      propertyPath: turnDuration
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20203,7 +20273,7 @@ PrefabInstance:
     - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
         type: 3}
       propertyPath: Radius
-      value: 4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
         type: 3}
@@ -20220,6 +20290,11 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 126414877}
+    - target: {fileID: 9124627201162866798, guid: dc58c5e525e387744b92325a67b6c621,
+        type: 3}
+      propertyPath: turnDuration
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
