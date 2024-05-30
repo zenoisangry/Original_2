@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GSPause : MonoBehaviour
+public class GSPause : IGameState
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnStateEnter()
     {
-        
+        UIManager.Instance.OpenUI(UIManager.UITypes.Pause);
+        //InputManager.InputSystem.Pause.Enable();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnStateExit()
     {
-        
+        //InputManager.InputSystem.Pause.Disable();
+    }
+    public void OnStateUpdate()
+    {
+        //if(InputManager.InputSystem.Pause.Resume.triggered)
+        //    GameStateManager.Instance.CurrentGameState = GameStateManager.GameStates.GamePlay;
     }
 }

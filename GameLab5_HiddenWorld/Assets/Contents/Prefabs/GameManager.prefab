@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5480652173689023798}
   - component: {fileID: 2009700158545096908}
+  - component: {fileID: 8760047607563877600}
+  - component: {fileID: 3534279096588709441}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,3 +47,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 3
+--- !u!114 &8760047607563877600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019314973080453050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400a9123165c90b4db4f3817ddace8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPrefabs:
+  - {fileID: 7102724989661419101, guid: e63d1a74b30c91348b279e4c37f4ab49, type: 3}
+  - {fileID: 6606131935144398717, guid: fcb8ac59023773b4e86318d41f9c4ec7, type: 3}
+  playerPrefab: {fileID: 6044456272627898656, guid: 7823553efdc7db64282b0af31c60880b,
+    type: 3}
+--- !u!114 &3534279096588709441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019314973080453050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb05113d8aebb044b8888668c418c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingGameState: 1
+  _currentGameState: 0

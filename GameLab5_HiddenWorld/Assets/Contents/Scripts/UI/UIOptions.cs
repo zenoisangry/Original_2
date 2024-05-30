@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class UIOptions : MonoBehaviour
+public class UIOptions : UIBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public override UIManager.UITypes UIType => UIManager.UITypes.Options;
 
-    // Update is called once per frame
-    void Update()
+    /*
+    public void SetCameraSensitibility(float multiplier)
     {
-        
+        GameManager.Instance.SetCameraSensitibility(multiplier);
     }
+    */
 }
