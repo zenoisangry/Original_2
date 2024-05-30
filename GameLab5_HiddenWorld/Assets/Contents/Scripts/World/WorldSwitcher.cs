@@ -12,10 +12,21 @@ public class WorldSwitcher : MonoBehaviour
 
     void Start()
     {
-        // Find all objects with the MaterialSwitcher component
+        InitializeSwitchers();
+        GameManager.OnLevelLoaded += InitializeSwitchers; // Subscribe to level loaded event
+    }
+
+    void OnDestroy()
+    {
+        GameManager.OnLevelLoaded -= InitializeSwitchers; // Unsubscribe to prevent memory leaks
+    }
+
+    private void InitializeSwitchers()
+    {
+        // Find all objects with the ChangeMaterial component
         changeM = FindObjectsOfType<ChangeMaterial>();
 
-        // Find all objects with the VisibilitySwitcher component
+        // Find all objects with the ToggleVisibility component
         toggle = FindObjectsOfType<ToggleVisibility>();
     }
 
@@ -42,6 +53,13 @@ public class WorldSwitcher : MonoBehaviour
         {
             switcher.SwitchVisibility(inWorld1);
         }
+
+        // Update enemies' player reference after switching worlds
+        foreach (Enemy enemy in FindObjectsOfType<Enemy>())
+        {
+            enemy.PlayerRef = GameObject.FindGameObjectWithTag("Player");
+        }
+
 
         // Wait for the cooldown period
         yield return new WaitForSeconds(cooldownTime);

@@ -29,11 +29,7 @@ public class Enemy : MonoBehaviour
     [Range(0,360)] public float Angle;
     public GameObject PlayerRef;
 
-    [Header("Player death")]
-    [SerializeField] private Transform player;
-    [SerializeField] private Transform destination;
-    [SerializeField] private GameObject playerg;
-
+    [Header("Parameters")]
     [SerializeField] private LayerMask targetMask;
     [SerializeField] private LayerMask obstructionMask;
 
@@ -96,9 +92,7 @@ public class Enemy : MonoBehaviour
         {
             fovMeshRenderer.material.color = playerDetectedColor;
             canMove = false; // Stop movement when player is detected
-            playerg.SetActive(false);
-            player.position = destination.position;
-            playerg.SetActive(true);
+            GameManager.Instance.RespawnPlayer(); // Call the RespawnPlayer method
         }
         else 
         {

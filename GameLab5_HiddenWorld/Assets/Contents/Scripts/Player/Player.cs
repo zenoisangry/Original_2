@@ -29,16 +29,6 @@ public class Player : MonoBehaviour
         cameraTransform = Camera.main.transform;
     }
 
-    private void OnEnable()
-    {
-        InputManager.Playercontrols.Player.Enable();
-    }
-
-    private void OnDisable()
-    {
-        InputManager.Playercontrols.Player.Disable();
-    }
-
     private bool IsGrounded()
     {
         return groundedPlayer = controller.isGrounded;
@@ -80,6 +70,12 @@ public class Player : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f); 
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
         }
+
+        // Check if player falls off the map
+        if (transform.position.y < -10f) 
+        {
+            GameManager.Instance.RespawnPlayer();
+        }
     }
 
     private IEnumerator Dash()
@@ -95,14 +91,6 @@ public class Player : MonoBehaviour
         canDash = true;
     }
 
-    public void Respawn(Vector3 respawnPosition)
-    {
-        transform.position = respawnPosition;
-        playerVelocity = Vector3.zero;
-        isDashing = false;
-        canDash = true;
-    }
-
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.CompareTag("Platform"))
@@ -115,5 +103,32 @@ public class Player : MonoBehaviour
             transform.SetParent(null);
             InputManager.Playercontrols.FindAction("ChangeWorld").Enable();
         }
+    }
+
+    private float currentGravity;
+    private Vector3 pausedSpeed;
+
+    public void Pause()
+    {
+        currentGravity = 0f;
+        pausedSpeed = playerVelocity;
+        playerVelocity = Vector3.zero;
+    }
+    public void Unpaused()
+    {
+        playerVelocity = pausedSpeed;
+        currentGravity = gravityValue;
+    }
+
+    public void RespawnPlayer(Vector3 spawnPosition)
+    {
+        Debug.Log("Player respawned.");
+        gameObject.SetActive(false); // Deactivate the player
+        // Set the player's position to the given spawn position.
+        transform.position = spawnPosition;
+        gameObject.SetActive(true); // Reactivate the player
+        playerVelocity = Vector3.zero;
+        isDashing = false;
+        canDash = true;
     }
 }

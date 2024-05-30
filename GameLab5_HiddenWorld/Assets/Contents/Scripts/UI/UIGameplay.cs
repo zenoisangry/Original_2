@@ -1,17 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class UIGameplay : MonoBehaviour
+public class UIGamePlay : UIBase
 {
-    // Start is called before the first frame update
-    void Start()
+    public override UIManager.UITypes UIType => UIManager.UITypes.Gameplay;
+    [SerializeField] private TextMeshProUGUI timerLabel;
+    public override void IsActive(bool isActive)
     {
+        base.IsActive(isActive);
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }

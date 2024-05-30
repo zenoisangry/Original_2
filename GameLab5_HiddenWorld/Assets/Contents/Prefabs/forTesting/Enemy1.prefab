@@ -110,7 +110,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.672, y: -0.031, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3777600097384716248}
@@ -291,18 +291,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2420c2a739631d6499796fb76c07a3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
   movementSpeed: 1
   pathPointsParent: {fileID: 202813413004714730}
   distanceFromPoint: 0.1
+  stopDuration: 2
+  turnDuration: 1
   canMove: 1
-  lookRotationTime: 1
   fovColor: {r: 0.27508143, g: 0.26991096, b: 0.85660374, a: 0.54901963}
   Radius: 4
   Angle: 50
   PlayerRef: {fileID: 0}
-  player: {fileID: 0}
-  destination: {fileID: 0}
-  playerg: {fileID: 0}
   targetMask:
     serializedVersion: 2
     m_Bits: 128

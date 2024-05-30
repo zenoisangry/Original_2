@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class GSMainMenu : MonoBehaviour
+public class GSMainMenu : IGameState
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnStateEnter()
     {
-        
+        UIManager.Instance.SetUI(UIManager.UITypes.MainMenu);
+        GameManager.Instance.ResetLevelIndex();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnStateExit()
     {
-        
+    }
+
+    public void OnStateUpdate()
+    {
     }
 }
