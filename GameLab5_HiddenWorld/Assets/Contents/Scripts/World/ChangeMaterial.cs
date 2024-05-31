@@ -5,27 +5,37 @@ public class ChangeMaterial : MonoBehaviour
     public Material world1Material;
     public Material world2Material;
 
-    private Renderer objRenderer;
+    private MeshRenderer meshRenderer;
 
-    void Awake()
+    void Start()
     {
-        objRenderer = GetComponent<Renderer>();
-        SetMaterialToWorld1();
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
+
+    void OnDestroy()
+    {
+        Debug.Log("ChangeMaterial object destroyed.");
     }
 
     public void SwitchMaterial(bool toWorld1)
     {
-        objRenderer.material = toWorld1 ? world1Material : world2Material;
+        if (meshRenderer == null)
+        {
+            Debug.LogWarning("MeshRenderer is null or has been destroyed.");
+            return;
+        }
+
+        meshRenderer.material = toWorld1 ? world1Material : world2Material;
     }
 
     public void SetMaterialToWorld1()
     {
-        objRenderer.material = world1Material;
+        meshRenderer.material = world1Material;
     }
 
     public void SetMaterialToWorld2()
     {
-        objRenderer.material = world2Material;
+        meshRenderer.material = world2Material;
     }
 
 }

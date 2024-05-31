@@ -64,6 +64,7 @@ MonoBehaviour:
   - {fileID: 6606131935144398717, guid: fcb8ac59023773b4e86318d41f9c4ec7, type: 3}
   playerPrefab: {fileID: 6044456272627898656, guid: 7823553efdc7db64282b0af31c60880b,
     type: 3}
+  switcher: {fileID: 2009700158545096908}
 --- !u!114 &3534279096588709441
 MonoBehaviour:
   m_ObjectHideFlags: 0

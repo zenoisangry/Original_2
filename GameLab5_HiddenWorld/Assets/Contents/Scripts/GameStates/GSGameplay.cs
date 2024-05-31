@@ -12,7 +12,8 @@ public class GSGameplay : IGameState
         GameManager.Instance.CurrentPlayer.Unpaused();
         if (GameManager.Instance.CurrentLevel == null)
         {
-            GameManager.Instance.LoadLevel();
+            GameManager.Instance.InitializeGame();
+            //GameManager.Instance.LoadLevel();
         }
         Debug.Log("Entered GamePlay State and loaded the level.");
     }

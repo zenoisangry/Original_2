@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class GSMainMenu : IGameState
 {
     public void OnStateEnter()
@@ -12,5 +14,10 @@ public class GSMainMenu : IGameState
 
     public void OnStateUpdate()
     {
+    }
+
+    public static void Quit()
+    {
+        Application.Quit();
     }
 }

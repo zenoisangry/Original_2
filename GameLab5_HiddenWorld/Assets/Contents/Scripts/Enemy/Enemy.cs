@@ -39,10 +39,15 @@ public class Enemy : MonoBehaviour
     private Transform fovTransform;
     public bool CanSeePlayer;
 
-    private void Start()
+    private void OnEnable()
     {
-        PlayerRef = GameObject.FindGameObjectWithTag("Player");
-        StartCoroutine(FOVRoutine());
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        PlayerRef = GameObject.FindWithTag("Player");
+        ForceFieldOfViewCheck(); // Ensure FOV check when activated
 
         fovTransform = transform.Find("FOV");
         if (fovTransform != null)
@@ -55,7 +60,18 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogError("FOV child GameObject is missing.");
         }
+
+        StartCoroutine(FOVRoutine());
     }
+
+
+    public void ForceFieldOfViewCheck()
+    {
+        Debug.Log("Forcing FOV check.");
+        FieldOfViewCheck();
+        Debug.Log($"CanSeePlayer after FOV check: {CanSeePlayer}");
+    }
+    
 
     private IEnumerator FOVRoutine()
     {
@@ -93,11 +109,13 @@ public class Enemy : MonoBehaviour
             fovMeshRenderer.material.color = playerDetectedColor;
             canMove = false; // Stop movement when player is detected
             GameManager.Instance.RespawnPlayer(); // Call the RespawnPlayer method
+            Debug.Log("Player detected, stopping movement and respawning player.");
         }
         else 
         {
             fovMeshRenderer.material.color = fovColor;
             canMove = true; // Resume movement when player is not detected
+            Debug.Log("Player not detected, resuming movement.");
         }
     }
 
@@ -156,7 +174,7 @@ public class Enemy : MonoBehaviour
     private void PrepareTurn()
     {
         initialRotation = transform.rotation;
-        targetRotation = Quaternion.Euler(0, transform.eulerAngles.y + 180, 0);
+        targetRotation = Quaternion.Euler(-90, transform.eulerAngles.y + 180, 0);
         currentState = EnemyState.Turning;
         stateTimer = 0f;
     }

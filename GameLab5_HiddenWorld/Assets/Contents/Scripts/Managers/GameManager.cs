@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public CinemachineVirtualCamera Camera { get; private set; }
     [SerializeField] private LevelController[] levelPrefabs;
     [SerializeField] private GameObject playerPrefab;
+
+    public WorldSwitcher switcher;
     public LevelController CurrentLevel { get; private set; }
     public Player CurrentPlayer { get; private set; }
     public bool IsLastLevel => currentLevelIndex == levelPrefabs.Length - 1;
@@ -44,6 +46,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("GameManager Start");
         GameStateManager.Instance.StartState();
     }
+
+    public void InitializeGame()
+    {
+        InstantiatePlayer();
+        LoadLevel();
+    }
+
     private void InstantiatePlayer()
     {
         if (CurrentPlayer == null && playerPrefab != null)
@@ -81,6 +90,7 @@ public class GameManager : MonoBehaviour
             CurrentLevel.MovePlayer();
             Debug.Log("Level loaded successfully.");
             OnLevelLoaded?.Invoke();  // Notify that a new level has been loaded
+
         }
         else
         {
@@ -99,6 +109,14 @@ public class GameManager : MonoBehaviour
         {
             currentLevelIndex++;
             LoadLevel();
+            if (switcher != null)
+            {
+                switcher.InitializeSwitchers();
+            }
+            else
+            {
+                Debug.LogWarning("Switcher is not assigned in GameManager.");
+            }
         }
     }
 
