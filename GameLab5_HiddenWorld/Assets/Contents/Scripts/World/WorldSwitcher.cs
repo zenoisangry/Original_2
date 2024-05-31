@@ -83,7 +83,6 @@ public class WorldSwitcher : MonoBehaviour
             {
                 enemy.PlayerRef = GameObject.FindWithTag("Player");
                 enemy.gameObject.SetActive(true); // Ensure the enemy is activated
-                enemy.ForceFieldOfViewCheck(); // Immediate check
                 Debug.Log($"Updated PlayerRef and forced FOV check for enemy: {enemy.name}. CanSeePlayer: {enemy.CanSeePlayer}");
             }
             else

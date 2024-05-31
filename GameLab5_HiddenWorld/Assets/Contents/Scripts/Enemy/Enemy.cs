@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     [Header("Field of view")]
     [SerializeField] private Color fovColor;  // Color for the FOV mesh
     public float Radius;
-    [Range(0,360)] public float Angle;
+    [Range(0, 360)] public float Angle;
     public GameObject PlayerRef;
 
     [Header("Parameters")]
@@ -39,15 +39,10 @@ public class Enemy : MonoBehaviour
     private Transform fovTransform;
     public bool CanSeePlayer;
 
-    private void OnEnable()
+    private void Start()
     {
-        Initialize();
-    }
-
-    private void Initialize()
-    {
-        PlayerRef = GameObject.FindWithTag("Player");
-        ForceFieldOfViewCheck(); // Ensure FOV check when activated
+        PlayerRef = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(FOVRoutine());
 
         fovTransform = transform.Find("FOV");
         if (fovTransform != null)
@@ -60,18 +55,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogError("FOV child GameObject is missing.");
         }
-
-        StartCoroutine(FOVRoutine());
     }
-
-
-    public void ForceFieldOfViewCheck()
-    {
-        Debug.Log("Forcing FOV check.");
-        FieldOfViewCheck();
-        Debug.Log($"CanSeePlayer after FOV check: {CanSeePlayer}");
-    }
-    
 
     private IEnumerator FOVRoutine()
     {
@@ -109,13 +93,11 @@ public class Enemy : MonoBehaviour
             fovMeshRenderer.material.color = playerDetectedColor;
             canMove = false; // Stop movement when player is detected
             GameManager.Instance.RespawnPlayer(); // Call the RespawnPlayer method
-            Debug.Log("Player detected, stopping movement and respawning player.");
         }
-        else 
+        else
         {
             fovMeshRenderer.material.color = fovColor;
             canMove = true; // Resume movement when player is not detected
-            Debug.Log("Player not detected, resuming movement.");
         }
     }
 
